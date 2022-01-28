@@ -1,17 +1,14 @@
 from journal import Journal
+from persistenceManager import PersistenceManager
+
 if __name__ == '__main__':
     j = Journal()
     # j.add_entry('first entry')
     # j.add_entry('second entry')
     # j.add_entry('third entry')
+    # PersistenceManager.save_to_file(j, 'persist.txt')
 
-    # # print(j)
-    # # j.remove_entry(2)
-    # # j.remove_entry(1)
+    PersistenceManager.load_from_file(j, 'persist.txt')
 
-    # print(j)
-
-    # j.save('persist.txt')
-    j.load('persist.txt')
     print(j)
 
